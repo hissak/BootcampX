@@ -6,7 +6,7 @@ CREATE TABLE teachers(
   is_active boolean DEFAULT TRUE
 );
 
-CREATE TABLE assistance_request(
+CREATE TABLE assistance_requests(
   id serial PRIMARY KEY NOT NULL,
   assignment_id integer REFERENCES assignments(id) ON DELETE CASCADE,
   student_id integer REFERENCES students(id) ON DELETE CASCADE,
